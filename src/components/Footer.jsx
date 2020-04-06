@@ -1,10 +1,11 @@
 import React from "react";
 
 function Footer(){
+    const year = new Date().getFullYear();
     return (
         <footer>
         <p>
-            copyright @ Jagruti Mohite
+            copyright @ {year}
         </p>
         </footer>
     )
