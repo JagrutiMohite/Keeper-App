@@ -12,16 +12,26 @@ function App () {
             return [...prevNote, note];
         })
     }
+    function deleteNote(id){
+        setHandleText(prevNote =>{
+            return prevNote.filter((item, index) =>{
+                return (index !== id);
+            })
+        })
+    }
     return (
         <div>
             <Header />
             <CreateArea 
                 onAdd={addNote}
             />
-           { handleText.map((notes)=>{
+           { handleText.map((notes, index)=>{
                 return <Note 
+                    key = {index}
+                    id = {index}
                     title = {notes.title}
                     content = {notes.content}
+                    onDelete={deleteNote}
                 />
             })
            }
