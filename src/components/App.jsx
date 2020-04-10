@@ -4,6 +4,7 @@ import Note from "./Note";
 import Footer from "./Footer";
 import CreateArea from "./CreateArea";
 
+
 function App () {
     const [handleText, setHandleText] = useState([]);
 
